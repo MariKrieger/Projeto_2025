@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar</title>
+    <link rel="stylesheet" href="b.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./1.jpg" alt="User" class="User">
+        <p>Loremipsum_lor123.com</p>
+        <ul class="menu">
+            <a href="./clubes.html"><li class="Monica">Clubes</li></a>
+            <a href="./Explorar.html"><li class="Rachel">Explorar</li></a>
+            <a href="./Estante.html"><li class="Janice">Estantes</li></a>
+            <a href="./Metas_desafios.html"><li class="Phoebe">Extras</li></a>
+        </ul>   
+    </header>
+    <main>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="./estante.jpg" alt="Frase 1" class="fundo">
+            <div class="quote">
+                O que não provoca minha morte<br>faz com que eu fique mais forte<br>– Friedrich Nietzsche
+            </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./estante.jpg" alt="Frase 2" class="fundo">
+            <div class="quote">
+                A leitura é, provavelmente, uma outra maneira de estar em um lugar.<br>– José Saramago
+            </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./estante.jpg" alt="Frase 3" class="fundo">
+            <div class="quote">
+                Livros são espelhos: neles só se vê o que possuímos dentro.<br>– Carlos Ruiz Zafón
+            </div>
+            </div>
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div> 
+    <div class="search">
+        <i>🔍</i>
+        <input type="text" placeholder="Buscar...">
+    </div>
+
+  <div class="section-title">Best-seller</div>
+
+  <div class="books">
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/91ZLFFWZszL._SY425_.jpg" alt="Livro 1">
+      <div class="book-title">Título</div>
+      <div class="book-author">- Autor</div>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81gTwYAhU7L._SY425_.jpg" alt="Livro 2">
+      <div class="book-title">Título</div>
+      <div class="book-author">- Autor</div>
+    </div>
+    <div class="book">
+      <img src="https://m.media-amazon.com/images/I/81iqZ2HHD-L._SY425_.jpg" alt="Livro 3">
+      <div class="book-title">Título</div>
+      <div class="book-author">- Autor</div>
+    </div>
+  </div>
+    </main>
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.dot');
+        const prev = document.querySelector('.carousel-control.prev');
+        const next = document.querySelector('.carousel-control.next');
+      
+        let current = 0;
+        let interval = setInterval(nextSlide, 4000);
+      
+        function updateCarousel(index) {
+          items.forEach(item => item.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+      
+          items[index].classList.add('active');
+          dots[index].classList.add('active');
+        }
+      
+        function nextSlide() {
+          current = (current + 1) % items.length;
+          updateCarousel(current);
+        }
+      
+        function prevSlide() {
+          current = (current - 1 + items.length) % items.length;
+          updateCarousel(current);
+        }
+      
+        next.addEventListener('click', () => {
+          nextSlide();
+          resetTimer();
+        });
+      
+        prev.addEventListener('click', () => {
+          prevSlide();
+          resetTimer();
+        });
+      
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            current = index;
+            updateCarousel(current);
+            resetTimer();
+          });
+        });
+      
+        function resetTimer() {
+          clearInterval(interval);
+          interval = setInterval(nextSlide, 4000);
+        }
+      </script>
+      
+</body>
+</html>
+
