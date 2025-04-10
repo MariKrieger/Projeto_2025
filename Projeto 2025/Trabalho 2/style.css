@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -16,95 +14,43 @@ body {
 
 header {
   display: flex;
-  background-color: #cbae99;
+  background-color: #1c1c1c;
   color: white;
+  align-items: center;
+  padding: 30px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-}
-
-
-.Logo {
-  width: 120px;
-  float: left;
-  margin-left: 30px;
-  border-radius: 50%;
-  border-color: black;
-  }
-
-
-.titulo {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 40px;
-  margin-left: 160px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+.ph {
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
   font-size: 30px;
-  padding-top: 40px;
+  margin-left: 40px;
 }
 
-.menu { 
-  margin-left: 50px;
-}
-
-.Monica, .Rachel, .Phoebe {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: .875rem;
-  padding-top: 45px;
-}
-
-
-
-.TESTE{
-  text-decoration: none;
-  color: black;
+.User {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .menu {
+  margin-left: 50px;
   list-style-type: none;
   padding: 0;
+  display: flex;
 }
 
-.menu li {
-  position: relative;
+.Monica, .Rachel, .Phoebe, .Janice {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   display: inline-block;
   margin-right: 20px;
-}
-
-.menu li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.menu li:hover ul {
-  display: block;
-}
-
-.menu li ul li {
-  padding: 8px 12px;
-}
-
-.menu li ul li:hover {
-  background-color: #ddd;
-}
-
-.People {
-  margin-top: 35px;
+  text-decoration: none;
+  position: relative;
 }
 
 .header nav a {
@@ -181,7 +127,7 @@ header h1 {
     margin-bottom: 15px;
   }
   
-  .user {
+  .users {
     color: #7289da;
     font-weight: bold;
   }
@@ -222,7 +168,8 @@ header h1 {
     margin: 100px auto 0 auto; 
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 .menu {
     list-style-type: none;
@@ -275,6 +222,11 @@ header h1 {
   margin-left: 50px;
 }
 
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 10px;
+}
 @media (max-width: 768px) {
   .container {
       padding: 1rem; 
