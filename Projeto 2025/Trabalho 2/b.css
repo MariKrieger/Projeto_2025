@@ -52,8 +52,7 @@ p {
     position: relative;
 }
 
-/* Removida a classe .TESTE pois não era usada */
-
+/* ===== CARROSSEL DE FRASES ===== */
 .carousel {
     position: relative;
     width: 100%;
@@ -135,6 +134,7 @@ p {
     gap: 8px;
 }
 
+/* ===== BARRA DE PESQUISA ===== */
 .search {
     display: flex;
     align-items: center;
@@ -162,17 +162,41 @@ p {
     cursor: pointer;
 }
 
+/* ===== SEÇÃO DE LIVROS POR CATEGORIA ===== */
 .section-title {
     font-size: 40px;
-    margin: 40px 0 10px 100px;
+    margin-left: 100px;
+    margin-bottom: 10px;
     font-family: 'Inter', sans-serif;
 }
 
+/* Container da linha completa */
+.linha {
+    margin-top: 50px;
+    position: relative;
+}
+
+/* Área que segura os botões de rolagem e os livros */
+.linha-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 100px;
+    position: relative;
+}
+
+/* Container horizontal de livros */
 .books {
     display: flex;
     gap: 30px;
     overflow-x: auto;
-    padding: 0 100px 20px;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    margin: 20px 20px;
+}
+
+.books::-webkit-scrollbar {
+    display: none;
 }
 
 .book {
@@ -194,6 +218,29 @@ p {
     color: white;
     word-wrap: break-word;
 }
-.linha {
-    margin-top: 30px;
+
+/* Botões de rolagem */
+.scroll-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaa;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scroll-btn:hover {
+    color: white;
+}
+
+.scroll-btn.left {
+    left: 80px;
+}
+
+.scroll-btn.right {
+    right: 80px;
 }

@@ -68,36 +68,58 @@
     </div>
     <div class="linha">
       <div class="section-title">Ação</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosAcaoContainer', -1)">&#10094;</button>
       <div class="books" id="livrosAcaoContainer"></div>
-    </div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosAcaoContainer', 1)">&#10095;</button>
+    </div>    
     <div class="linha">
       <div class="section-title">Aventura</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosAventuraContainer', -1)">&#10094;</button>
       <div class="books" id="livrosAventuraContainer"></div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosAventuraContainer', 1)">&#10095;</button>
     </div>
     <div class="linha">
       <div class="section-title">Distopia</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosDistopiaContainer', -1)">&#10094;</button>
       <div class="books" id="livrosDistopiaContainer"></div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosDistopiaContainer', 1)">&#10095;</button>
     </div>
     <div class="linha">
       <div class="section-title">Drama</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosDramaContainer', -1)">&#10094;</button>
       <div class="books" id="livrosDramaContainer"></div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosDramaContainer', 1)">&#10095;</button>
     </div>
     <div class="linha">
       <div class="section-title">Fantasia</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosFantasiaContainer', -1)">&#10094;</button>
       <div class="books" id="livrosFantasiaContainer"></div>
-    </div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosFantasiaContainer', 1)">&#10095;</button>
+    </div>    
     <div class="linha">
       <div class="section-title">Ficção</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosFiccaoContainer', -1)">&#10094;</button>
       <div class="books" id="livrosFiccaoContainer"></div>
-    </div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosFiccaoContainer', 1)">&#10095;</button>
+    </div>    
     <div class="linha">
       <div class="section-title">Investigação</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosInvestigacaoContainer', -1)">&#10094;</button>
       <div class="books" id="livrosInvestigacaoContainer"></div>
-    </div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosInvestigacaoContainer', 1)">&#10095;</button>
+    </div>    
     <div class="linha">
       <div class="section-title">Romance</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosRomanceContainer', -1)">&#10094;</button>
       <div class="books" id="livrosRomanceContainer"></div>
-    </div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosRomanceContainer', 1)">&#10095;</button>
+    </div>    
+    <div class="linha">
+      <div class="section-title">Suspense</div>
+      <button class="scroll-btn left" onclick="scrollBooks('livrosSuspenseContainer', -1)">&#10094;</button>
+      <div class="books" id="livrosSuspenseContainer"></div>
+      <button class="scroll-btn right" onclick="scrollBooks('livrosSuspenseContainer', 1)">&#10095;</button>
+    </div>    
   </main>
   <script>
     const items = document.querySelectorAll('.carousel-item');
@@ -199,6 +221,14 @@
   carregarLivrosDoCSV('livosf.csv', 'livrosFiccaoContainer');
   carregarLivrosDoCSV('livosg.csv', 'livrosInvestigacaoContainer');
   carregarLivrosDoCSV('livosh.csv', 'livrosRomanceContainer');
+  carregarLivrosDoCSV('livosi.csv', 'livrosSuspenseContainer');
+
+  function scrollBooks(containerId, direction) {
+  const container = document.getElementById(containerId);
+  const scrollAmount = 400 * direction; 
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
 </script>
 
 </body>
