@@ -1,129 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorar</title>
-    <link rel="stylesheet" href="b.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar</title>
+  <link rel="stylesheet" href="b.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 <body>
-    <header>
-        <img src="./1.jpg" alt="User" class="User">
-        <p>Loremipsum_lor123.com</p>
-        <ul class="menu">
-            <a href="./clubes.html"><li class="Monica">Clubes</li></a>
-            <a href="./Explorar.html"><li class="Rachel">Explorar</li></a>
-            <a href="./Estante.html"><li class="Janice">Estantes</li></a>
-            <a href="./Metas_desafios.html"><li class="Phoebe">Extras</li></a>
-        </ul>   
-    </header>
-    <main>
-      <div class="search">
-        <input type="text" placeholder="Buscar...">
-        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-        </svg></button>
+  <header>
+    <img src="./1.jpg" alt="User" class="User">
+    <p>Loremipsum_lor123.com</p>
+    <ul class="menu">
+      <a href="./clubes.html">
+        <li class="Monica">Clubes</li>
+      </a>
+      <a href="./Explorar.html">
+        <li class="Rachel">Explorar</li>
+      </a>
+      <a href="./Estante.html">
+        <li class="Janice">Estantes</li>
+      </a>
+      <a href="./Metas_desafios.html">
+        <li class="Phoebe">Extras</li>
+      </a>
+    </ul>
+  </header>
+  <main>
+    <div class="search">
+      <input type="text" placeholder="Buscar...">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+        </svg>
+      </button>
     </div>
-        <div class="carousel">
-            <div class="carousel-item active">
-                <img src="./estante.jpg" alt="Frase 1" class="fundo">
-            <div class="quote">
-                O que não provoca minha morte<br>faz com que eu fique mais forte<br>– Friedrich Nietzsche
-            </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./estante.jpg" alt="Frase 2" class="fundo">
-            <div class="quote">
-                A leitura é, provavelmente, uma outra maneira de estar em um lugar.<br>– José Saramago
-            </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./estante.jpg" alt="Frase 3" class="fundo">
-            <div class="quote">
-                Livros são espelhos: neles só se vê o que possuímos dentro.<br>– Carlos Ruiz Zafón
-            </div>
-            </div>
-            <button class="carousel-control prev">&#10094;</button>
-            <button class="carousel-control next">&#10095;</button>
-            <div class="carousel-indicators">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div> 
 
-  <div class="section-title">Ação</div>
-  <div class="books">
-    <div class="book">
-      <img src="./1.jpg" alt="Livro 1">
-      <div class="book-title">A Ilha do Tesouro</div>
+    <div class="carousel">
+      <div class="carousel-item active">
+        <img src="./estante.jpg" alt="Frase 1" class="fundo">
+        <div class="quote">
+          O que não provoca minha morte<br>faz com que eu fique mais forte<br>– Friedrich Nietzsche
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./estante.jpg" alt="Frase 2" class="fundo">
+        <div class="quote">
+          A leitura é, provavelmente, uma outra maneira de estar em um lugar.<br>– José Saramago
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./estante.jpg" alt="Frase 3" class="fundo">
+        <div class="quote">
+          Livros são espelhos: neles só se vê o que possuímos dentro.<br>– Carlos Ruiz Zafón
+        </div>
+      </div>
+      <button class="carousel-control prev">&#10094;</button>
+      <button class="carousel-control next">&#10095;</button>
+      <div class="carousel-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
-    <div class="book">
-      <img src="./2.jpg" alt="Livro 2">
-      <div class="book-title">Caraval</div>
+    <div class="linha">
+      <div class="section-title">Ação</div>
+      <div class="books" id="livrosAcaoContainer"></div>
     </div>
-    <div class="book">
-      <img src="./5.jpg" alt="Livro 3">
-      <div class="book-title">Destruidor de mundos</div>
+    <div class="linha">
+      <div class="section-title">Aventura</div>
+      <div class="books" id="livrosAventuraContainer"></div>
     </div>
-    <div class="book">
-      <img src="./7.jpg" alt="Livro 4">
-      <div class="book-title">O hobbit</div>
+    <div class="linha">
+      <div class="section-title">Distopia</div>
+      <div class="books" id="livrosDistopiaContainer"></div>
     </div>
-  </div>
-    </main>
-    <script>
-        const items = document.querySelectorAll('.carousel-item');
-        const dots = document.querySelectorAll('.dot');
-        const prev = document.querySelector('.carousel-control.prev');
-        const next = document.querySelector('.carousel-control.next');
-      
-        let current = 0;
-        let interval = setInterval(nextSlide, 4000);
-      
-        function updateCarousel(index) {
-          items.forEach(item => item.classList.remove('active'));
-          dots.forEach(dot => dot.classList.remove('active'));
-      
-          items[index].classList.add('active');
-          dots[index].classList.add('active');
-        }
-      
-        function nextSlide() {
-          current = (current + 1) % items.length;
-          updateCarousel(current);
-        }
-      
-        function prevSlide() {
-          current = (current - 1 + items.length) % items.length;
-          updateCarousel(current);
-        }
-      
-        next.addEventListener('click', () => {
-          nextSlide();
-          resetTimer();
-        });
-      
-        prev.addEventListener('click', () => {
-          prevSlide();
-          resetTimer();
-        });
-      
-        dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
-            current = index;
-            updateCarousel(current);
-            resetTimer();
-          });
-        });
-      
-        function resetTimer() {
-          clearInterval(interval);
-          interval = setInterval(nextSlide, 4000);
-        }
-      </script>
-      
+    <div class="linha">
+      <div class="section-title">Drama</div>
+      <div class="books" id="livrosDramaContainer"></div>
+    </div>
+    <div class="linha">
+      <div class="section-title">Fantasia</div>
+      <div class="books" id="livrosFantasiaContainer"></div>
+    </div>
+    <div class="linha">
+      <div class="section-title">Ficção</div>
+      <div class="books" id="livrosFiccaoContainer"></div>
+    </div>
+    <div class="linha">
+      <div class="section-title">Investigação</div>
+      <div class="books" id="livrosInvestigacaoContainer"></div>
+    </div>
+    <div class="linha">
+      <div class="section-title">Romance</div>
+      <div class="books" id="livrosRomanceContainer"></div>
+    </div>
+  </main>
+  <script>
+    const items = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.querySelector('.carousel-control.prev');
+    const next = document.querySelector('.carousel-control.next');
+
+    let current = 0;
+    let interval = setInterval(nextSlide, 4000);
+
+    function updateCarousel(index) {
+      items.forEach(item => item.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      items[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % items.length;
+      updateCarousel(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + items.length) % items.length;
+      updateCarousel(current);
+    }
+
+    next.addEventListener('click', () => {
+      nextSlide();
+      resetTimer();
+    });
+
+    prev.addEventListener('click', () => {
+      prevSlide();
+      resetTimer();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        current = index;
+        updateCarousel(current);
+        resetTimer();
+      });
+    });
+
+    function resetTimer() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 4000);
+    }
+
+  function gerarLink(titulo) {
+    return './' + titulo
+      .normalize('NFD') 
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_') 
+      .replace(/[^\w_]/g, '') 
+      + '.html';
+  }
+
+  async function carregarLivrosDoCSV(caminhoCSV, containerId) {
+    try {
+      const response = await fetch(caminhoCSV);
+      const csvText = await response.text();
+      const container = document.getElementById(containerId);
+
+      const resultado = Papa.parse(csvText, {
+        header: true, 
+        skipEmptyLines: true
+      });
+
+      resultado.data.forEach(livro => {
+        const titulo = livro['Título']?.trim();
+        const imagem = livro['Capa']?.trim();
+
+        if (!titulo || !imagem) return;
+
+        const linkPagina = gerarLink(titulo);
+
+        const div = document.createElement('div');
+        div.classList.add('book');
+        div.innerHTML = `
+          <a href="${linkPagina}">
+            <img src="${imagem}" alt="${titulo}">
+          </a>
+          <div class="book-title">${titulo}</div>
+        `;
+        container.appendChild(div);
+      });
+    } catch (erro) {
+      console.error(`Erro ao carregar ${caminhoCSV}:`, erro);
+    }
+  }
+  carregarLivrosDoCSV('livrosa.csv', 'livrosAcaoContainer');
+  carregarLivrosDoCSV('livosb.csv', 'livrosAventuraContainer');
+  carregarLivrosDoCSV('livosc.csv', 'livrosDistopiaContainer');
+  carregarLivrosDoCSV('livosd.csv', 'livrosDramaContainer');
+  carregarLivrosDoCSV('livose.csv', 'livrosFantasiaContainer');
+  carregarLivrosDoCSV('livosf.csv', 'livrosFiccaoContainer');
+  carregarLivrosDoCSV('livosg.csv', 'livrosInvestigacaoContainer');
+  carregarLivrosDoCSV('livosh.csv', 'livrosRomanceContainer');
+</script>
+
 </body>
 </html>
-
