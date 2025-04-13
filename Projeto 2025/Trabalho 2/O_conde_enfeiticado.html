@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso de leitura</title>
+    <link rel="stylesheet" href="Progress9.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="./perfil.jpg" alt="User" class="User">
+        <p class="ph">Loremipsum_lor123.com</p>
+        <ul class="menu">
+            <a href="./clubes.html">
+                <li class="Monica">Clubes</li>
+            </a>
+            <a href="./Explorar.html">
+                <li class="Rachel">Explorar</li>
+            </a>
+            <a href="./Estante.html">
+                <li class="Janice">Estantes</li>
+            </a>
+            <a href="./Metas_desafios.html">
+                <li class="Phoebe">Extras</li>
+            </a>
+        </ul>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="container">
+                <img src="./215.jpg" alt="Capa do Livro" class="book-cover">
+                <div class="book-info">
+                    <h2>O conde enfeitiçado</h2>
+                    <p>Julia Quinn</p>
+                    <div class="stars" id="rating-stars">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="pages">Páginas Lidas</label>
+                    <input type="number" id="pages" min="0" max="1000" value="60">
+                </div>
+
+                <div class="input-group">
+                    <label for="start-date">Começou a ler em</label>
+                    <input type="date" id="start-date" value="2024-10-31">
+                </div>
+
+                <div class="input-group">
+                    <label for="end-date">Terminou de ler em</label>
+                    <input type="date" id="end-date">
+                </div>
+
+                <div class="input-group">
+                    <label for="shelf">Prateleira</label>
+                    <select id="shelf">
+                        <option value="reading">Lendo</option>
+                        <option value="to-read">Quero ler</option>
+                        <option value="read">Lido</option>
+                    </select>
+                </div>
+                <button class="save-button" onclick="saveData()">SALVAR</button>
+            </div>
+
+            <div class="empty-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#e4c7c3"
+                    class="bi bi-file-text-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1" />
+                </svg>
+                <h2 class="Beauty">Sinopse</h2>
+                <p class="Beast">Toda vida tem um divisor de águas, um momento súbito, empolgante e extraordinário que
+                    muda a pessoa para sempre. Para Michael Stirling, esse instante ocorreu na primeira vez em que pôs
+                    os olhos em Francesca Bridgerton.
+
+                    Depois de anos colecionando conquistas amorosas sem nunca entregar seu coração, o libertino mais
+                    famoso de Londres enfim se apaixonou. Infelizmente, conheceu a mulher de seus sonhos no jantar de
+                    ensaio do casamento dela. Em 36 horas, Francesca se tornaria esposa do primo dele.
+
+                    Mas isso foi no passado. Quatro anos depois, Francesca está livre, embora só pense em Michael como
+                    amigo e confidente. E ele não ousa falar com ela sobre seus sentimentos – a culpa por amar a viúva
+                    de John, praticamente um irmão para ele, não permite.
+
+                    Em um encontro inesperado, porém, Francesca começa a ver Michael de outro modo. Quando ela cai nos
+                    braços dele, a paixão e o desejo provam ser mais fortes do que a culpa. Agora o ex-devasso precisa
+                    convencê-la de que nenhum homem além dele a fará mais feliz.
+                </p>
+            </div>
+            <div class="tab">
+                <a href="./O_duque_e_eu.html"><button class="tablinks" onclick="openCity(event, 'London')">1° O duque e eu</button></a>
+                <a href="./O_visconde_que_me_amava.html"><button class="tablinks" onclick="openCity(event, 'Paris')">2° O visconde que me amava</button></a>
+                <a href="./Um_perfeito_cavalheiro.html"><button class="tablinks" onclick="openCity(event, 'Tokyo')">3° Um perfeito cavalheiro</button></a>
+                <a href="./Os_segredos_de_Colin_Bridgerton.html"><button class="tablinks" onclick="openCity(event, 'London')">4° Os segredos de Colin Bridgerton</button></a>
+                <a href="./Para_Sir_Phillip_com_amor.html"><button class="tablinks" onclick="openCity(event, 'London')">5° Para Sir Phillip, com amor</button></a>
+                <a href="./O_conde_enfeiticado.html"><button class="tablinks" onclick="openCity(event, 'Paris')">6° O conde enfeitiçado</button></a>
+                <a href="./Um_beijo_inesquecivel.html"><button class="tablinks" onclick="openCity(event, 'Tokyo')">7° Um beijo inesquecível</button></a>
+                <a href="./A_caminho_do_altar.html"><button class="tablinks" onclick="openCity(event, 'London')">8° A caminho do altar</button></a>
+                <a href="./E_viveram_felizes_para_sempre.html"><button class="tablinks" onclick="openCity(event, 'London')">9° E viveram felizes para sempre</button></a>
+            </div>
+    </main>
+    <script src="Progresso.js"></script>
+</body>
+
+</html>

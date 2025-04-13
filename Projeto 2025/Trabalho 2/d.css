@@ -106,3 +106,48 @@ header {
     cursor: pointer;
     display: flex;
 }
+
+.book {
+    display: flex;
+}
+
+section {
+    flex-direction: column;
+}
+
+.Pen {
+    width: 140px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.name {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+}
+
+.writer {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.bookmark-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.bookmark-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: white; 
+}  
