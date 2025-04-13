@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="./1.jpg" alt="User" class="User">
+        <img src="./perfil.jpg" alt="User" class="User">
         <p>Loremipsum_lor123.com</p>
         <ul class="menu">
             <a href="./clubes.html">
@@ -28,7 +28,7 @@
     </header>
     <main>
         <div class="search">
-            <input type="text" placeholder="Buscar...">
+            <input type="text" id="searchInput" placeholder="Buscar...">
             <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-search" viewBox="0 0 16 16">
                     <path
@@ -36,23 +36,41 @@
                 </svg></button>
         </div>
         <div class="genres">
-            <div class="genre">
-                <img src="./1.jpg" alt="Romance">
+            <a href="./Clube.html"><div class="genre">
+                <img src="./Love.jpg" alt="Romance">
                 <span>Romance</span>
-            </div>
-            <div class="genre">
-                <img src="./1.jpg" alt="Terror">
-                <span>Terror</span>
-            </div>
-            <div class="genre">
-                <img src="./1.jpg" alt="Distopia">
+            </div></a>
+            <a href="./Clube.html"><div class="genre">
+                <img src="./Suspense.jpg" alt="Terror">
+                <span>Suspense</span>
+            </div></a>
+            <a href="./Clube.html"><div class="genre">
+                <img src="./Capa.jpg" alt="Distopia">
                 <span>Distopia</span>
-            </div>
+            </div></a>
         </div>
         </div>
     </main>
     <footer>
         <p class="footer">&copy; 2024 Book Club. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const genres = document.querySelectorAll(".genre");
+    
+        searchInput.addEventListener("input", function () {
+            const filter = searchInput.value.toLowerCase();
+    
+            genres.forEach(genre => {
+                const text = genre.querySelector("span").textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    genre.style.display = "flex"; // Ou "block", dependendo do layout
+                } else {
+                    genre.style.display = "none";
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>

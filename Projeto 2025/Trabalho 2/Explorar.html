@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <img src="./1.jpg" alt="User" class="User">
+    <img src="./perfil.jpg" alt="User" class="User">
     <p>Loremipsum_lor123.com</p>
     <ul class="menu">
       <a href="./clubes.html">
@@ -29,7 +29,7 @@
   </header>
   <main>
     <div class="search">
-      <input type="text" placeholder="Buscar...">
+      <input type="text" id="searchInput" placeholder="Buscar...">
       <button>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
           viewBox="0 0 16 16">
@@ -121,115 +121,7 @@
       <button class="scroll-btn right" onclick="scrollBooks('livrosSuspenseContainer', 1)">&#10095;</button>
     </div>    
   </main>
-  <script>
-    const items = document.querySelectorAll('.carousel-item');
-    const dots = document.querySelectorAll('.dot');
-    const prev = document.querySelector('.carousel-control.prev');
-    const next = document.querySelector('.carousel-control.next');
-
-    let current = 0;
-    let interval = setInterval(nextSlide, 4000);
-
-    function updateCarousel(index) {
-      items.forEach(item => item.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-
-      items[index].classList.add('active');
-      dots[index].classList.add('active');
-    }
-
-    function nextSlide() {
-      current = (current + 1) % items.length;
-      updateCarousel(current);
-    }
-
-    function prevSlide() {
-      current = (current - 1 + items.length) % items.length;
-      updateCarousel(current);
-    }
-
-    next.addEventListener('click', () => {
-      nextSlide();
-      resetTimer();
-    });
-
-    prev.addEventListener('click', () => {
-      prevSlide();
-      resetTimer();
-    });
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        current = index;
-        updateCarousel(current);
-        resetTimer();
-      });
-    });
-
-    function resetTimer() {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 4000);
-    }
-
-  function gerarLink(titulo) {
-    return './' + titulo
-      .normalize('NFD') 
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/\s+/g, '_') 
-      .replace(/[^\w_]/g, '') 
-      + '.html';
-  }
-
-  async function carregarLivrosDoCSV(caminhoCSV, containerId) {
-    try {
-      const response = await fetch(caminhoCSV);
-      const csvText = await response.text();
-      const container = document.getElementById(containerId);
-
-      const resultado = Papa.parse(csvText, {
-        header: true, 
-        skipEmptyLines: true
-      });
-
-      resultado.data.forEach(livro => {
-        const titulo = livro['Título']?.trim();
-        const imagem = livro['Capa']?.trim();
-
-        if (!titulo || !imagem) return;
-
-        const linkPagina = gerarLink(titulo);
-
-        const div = document.createElement('div');
-        div.classList.add('book');
-        div.innerHTML = `
-          <a href="${linkPagina}">
-            <img src="${imagem}" alt="${titulo}">
-          </a>
-          <div class="book-title">${titulo}</div>
-        `;
-        container.appendChild(div);
-      });
-    } catch (erro) {
-      console.error(`Erro ao carregar ${caminhoCSV}:`, erro);
-    }
-  }
-  carregarLivrosDoCSV('livrosa.csv', 'livrosAcaoContainer');
-  carregarLivrosDoCSV('livosb.csv', 'livrosAventuraContainer');
-  carregarLivrosDoCSV('livosc.csv', 'livrosDistopiaContainer');
-  carregarLivrosDoCSV('livosd.csv', 'livrosDramaContainer');
-  carregarLivrosDoCSV('livose.csv', 'livrosFantasiaContainer');
-  carregarLivrosDoCSV('livosf.csv', 'livrosFiccaoContainer');
-  carregarLivrosDoCSV('livosg.csv', 'livrosInvestigacaoContainer');
-  carregarLivrosDoCSV('livosh.csv', 'livrosRomanceContainer');
-  carregarLivrosDoCSV('livosi.csv', 'livrosSuspenseContainer');
-
-  function scrollBooks(containerId, direction) {
-  const container = document.getElementById(containerId);
-  const scrollAmount = 400 * direction; 
-  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-}
-
-</script>
+  <script src="Carrossel.js"></script>
 <footer>
   <p class="footer">&copy; 2024 Book Club. Todos os direitos reservados.</p>
 </footer>

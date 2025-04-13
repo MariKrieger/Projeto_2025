@@ -40,7 +40,10 @@ p {
     display: flex;
 }
 
-.Monica, .Rachel, .Phoebe, .Janice {
+.Monica,
+.Rachel,
+.Phoebe,
+.Janice {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 0.875rem;
@@ -134,7 +137,7 @@ p {
     gap: 8px;
 }
 
-/* ===== BARRA DE PESQUISA ===== */
+
 .search {
     display: flex;
     align-items: center;
@@ -219,7 +222,7 @@ p {
     word-wrap: break-word;
 }
 
-/* Botões de rolagem */
+
 .scroll-btn {
     background-color: transparent;
     border: none;
@@ -249,4 +252,126 @@ p {
     text-align: center;
     padding: 1rem;
     font-size: 10px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 1024px) {
+    .section-title {
+        margin-left: 40px;
+        font-size: 30px;
+    }
+
+    .linha-container {
+        padding: 0 40px;
+    }
+
+    .scroll-btn.left {
+        left: 30px;
+    }
+
+    .scroll-btn.right {
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .Monica,
+    .Rachel,
+    .Phoebe,
+    .Janice {
+        margin: 5px 0;
+    }
+
+    .carousel {
+        max-width: 90%;
+        height: 200px;
+    }
+
+    .quote {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .books {
+        gap: 20px;
+        margin: 10px;
+    }
+
+    .book {
+        width: 100px;
+    }
+
+    .book-title {
+        font-size: 16px;
+    }
+
+    .search {
+        width: 90%;
+    }
+
+    .scroll-btn {
+        font-size: 1.5rem;
+    }
+
+    .scroll-btn.left {
+        left: 10px;
+    }
+
+    .scroll-btn.right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 160px;
+    }
+
+    .quote {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .book {
+        width: 80px;
+    }
+
+    .book-title {
+        font-size: 14px;
+    }
+
+    .scroll-btn {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .footer {
+        font-size: 8px;
+    }
 }

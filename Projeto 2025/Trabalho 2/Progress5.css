@@ -1,5 +1,4 @@
 * {
-    max-width: 1270px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,101 +17,48 @@ body {
 
 header {
     display: flex;
-    background-color: #cbae99;
+    background-color: #1c1c1c;
     color: white;
+    align-items: center;
+    padding: 30px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
-
-.Logo {
-    width: 120px;
-    float: left;
-    margin-left: 30px;
-    border-radius: 50%;
-    border-color: black;
-}
-
-
-.titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 40px;
-    margin-left: 160px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.ph {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
     font-size: 30px;
-    padding-top: 40px;
+    margin-left: 40px;
+}
+
+.User {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .menu {
     margin-left: 50px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
 }
 
 .Monica,
 .Rachel,
-.Phoebe {
+.Phoebe,
+.Janice {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    font-size: 20px;
-    text-decoration: none;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-size: .875rem;
-    padding-top: 45px;
-}
-
-
-
-.TESTE {
-    text-decoration: none;
-    color: black;
-}
-
-.menu {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu li {
-    position: relative;
     display: inline-block;
     margin-right: 20px;
-}
-
-.menu li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.menu li:hover ul {
-    display: block;
-}
-
-.menu li ul li {
-    padding: 8px 12px;
-}
-
-.menu li ul li:hover {
-    background-color: #ddd;
-}
-
-.header nav a {
-    color: white;
-    margin: 0 1rem;
     text-decoration: none;
-    font-weight: bold;
+    position: relative;
 }
+
 
 
 .main-container {
@@ -243,31 +189,6 @@ header h1 {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    input,
-    button,
-    textarea {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    input,
-    button,
-    textarea {
-        font-size: 0.8rem;
-        padding: 0.6rem;
-    }
-}
-
-
-
-
 
 .tab {
     float: left;
@@ -296,10 +217,6 @@ header h1 {
     background-color: #e4c7c3;
 }
 
-
-
-
-
 .tabcontent {
     float: left;
     padding: 0px 12px;
@@ -307,4 +224,128 @@ header h1 {
     width: 70%;
     border-left: none;
 
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 1024px) {
+    .main-container {
+        margin-left: 0;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .tab {
+        width: 35%;
+        height: auto;
+    }
+
+    .tabcontent {
+        width: 65%;
+        padding: 10px;
+    }
+
+    .container,
+    .empty-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .ph {
+        font-size: 24px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .tab,
+    .tabcontent {
+        width: 100%;
+    }
+
+    .tab {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        border: none;
+        justify-content: center;
+    }
+
+    .tab button {
+        width: 45%;
+        margin: 5px;
+        font-size: 0.9rem;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .tabcontent {
+        border: none;
+        padding: 10px 0;
+    }
+
+    .container,
+    .empty-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ph {
+        font-size: 20px;
+    }
+
+    .tab button {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+
+    .container .book-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .container .book-info p,
+    .empty-container .Beast,
+    .empty .Aurora {
+        font-size: 0.9rem;
+    }
+
+    .save-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .User {
+        width: 40px;
+        height: 40px;
+    }
+
+    .book-cover {
+        max-width: 150px;
+    }
+
+    .stars .star {
+        font-size: 1.3rem;
+    }
 }
