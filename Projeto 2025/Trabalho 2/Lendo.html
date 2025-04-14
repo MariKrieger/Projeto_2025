@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lidos</title>
+    <title>Lendo</title>
     <link rel="stylesheet" href="d.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 </head>
@@ -27,7 +27,7 @@
         </ul>
     </header>
     <main>
-        <h1 class="title">Lidos (256)</h1>
+        <h1 class="title">Lendo (2)</h1>
         <div class="search-plus-wrapper">
             <div class="search">
                 <input type="text" id="searchInput" placeholder="Buscar...">
@@ -40,15 +40,16 @@
                 </button>
             </div>
             <div class="filter">
-  <select class="tempo" id="estado" onchange="carregarCidades()">
-    <option value=""> Filtro </option>
-    <option value="sp">Lido</option>
-    <option value="rj">Não lido</option>
-    <option value="mg">Lendo</option>
-    <option value="sp">Séries</option>
-    <option value="rj">Autor</option>
-    <option value="mg">Gênero</option>
-  </select>
+                <div class="dropdown">
+                    <button class="bi bi-funnel" type="button" data-toggle="dropdown" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
                 <input type="text" id="filterInput" placeholder="">
                 <button class="filter-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -61,15 +62,15 @@
         </div>
     </main>
     <div class="book">
-        <a href="./Os_segredos_de_Colin_Bridgerton.html"><img src="./213.jpg" alt="Romance" class="Pen"></a>
+        <a href="./Caraval.html"><img src="./2.jpg" alt="Romance" class="Pen"></a>
     <section>
-        <h3 class="name">Os segredos de Colin Bridgerton</h3>
-        <p class="writer">Julia Quinn</p> 
+        <h3 class="name">Caraval</h3>
+        <p class="writer">Stephanie Garber</p> 
         <div class="bookmark-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bookmark" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5m8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
             </svg>
-            <p class="bookmark-text">336</p>
+            <p class="bookmark-text">352</p>
         </div>
     </section>
 </body>

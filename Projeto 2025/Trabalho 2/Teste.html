@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleção de Estado e Cidade</title>
+</head>
+<body>
+
+  <h2>Escolha seu estado e cidade:</h2>
+
+  <label for="estado">Estado:</label>
+  <select id="estado" onchange="carregarCidades()">
+    <option value="">-- Selecione o estado --</option>
+    <option value="sp">São Paulo</option>
+    <option value="rj">Rio de Janeiro</option>
+    <option value="mg">Minas Gerais</option>
+  </select>
+
+  <br><br>
+
+  <label for="cidade">Cidade:</label>
+  <select id="cidade">
+    <option value="">-- Selecione a cidade --</option>
+  </select>
+
+  <script>
+    const cidadesPorEstado = {
+      sp: ["São Paulo", "Campinas", "Santos"],
+      rj: ["Rio de Janeiro", "Niterói", "Petrópolis"],
+      mg: ["Belo Horizonte", "Uberlândia", "Ouro Preto"]
+    };
+
+    function carregarCidades() {
+      const estado = document.getElementById("estado").value;
+      const cidadeSelect = document.getElementById("cidade");
+
+      cidadeSelect.innerHTML = '<option value="">-- Selecione a cidade --</option>';
+
+      if (estado && cidadesPorEstado[estado]) {
+        cidadesPorEstado[estado].forEach(cidade => {
+          const option = document.createElement("option");
+          option.value = cidade.toLowerCase().replace(/\s+/g, '-');
+          option.textContent = cidade;
+          cidadeSelect.appendChild(option);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -151,3 +151,12 @@ section {
     font-size: 20px;
     color: white; 
 }  
+
+.tempo {
+    border: none;
+    background-color: #1c1c1c;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: lighter;
+}
